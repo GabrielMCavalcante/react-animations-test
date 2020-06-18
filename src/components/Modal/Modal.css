@@ -1,0 +1,48 @@
+.Modal {
+    position: fixed;
+    z-index: 200;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    transition: all 200ms ease-out;
+}
+
+.Modal.Open {
+    animation: openModal 400ms ease-out forwards;
+}
+
+.Modal.Close {
+    animation: closeModal 400ms ease-in forwards;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+        margin: 0 auto;
+        transform: rotate(-360deg) scale(0);
+    }
+    to {
+        opacity: 1;
+        margin: 0 auto;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes closeModal {
+    from {
+        opacity: 1;
+        margin: 0 auto;
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        opacity: 0;
+        margin: 0 auto;
+        transform: rotate(360deg) scale(0);
+    }
+}
