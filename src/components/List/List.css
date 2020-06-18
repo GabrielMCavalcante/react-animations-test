@@ -1,0 +1,60 @@
+.List {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 280px;
+}
+
+.ListItem {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #521751;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ListItem:hover,
+.ListItem:active {
+    background-color: #ccc;
+}
+
+.ListItem.Added {
+    animation: added 300ms ease-out forwards;
+}
+
+.ListItem.Removed {
+    animation: removed 300ms ease-out forwards;
+}
+
+@keyframes added {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes removed {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
